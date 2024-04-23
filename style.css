@@ -2,4 +2,47 @@ body{
     background-image:url("/imgs/casa.jpg") ;
     background-repeat:no-repeat;
     background-size: cover;
+    z-index: 1;
+}
+
+.sol{
+    width:300px;
+    margin-top: -4vh;
+    margin-left: 1500px;
+    position:absolute;
+    animation-name:anim_sol;
+    animation-duration:2s;
+    animation-delay: 0s;
+    opacity:1;
+    animation-direction: normal;
+    animation: girar 5s infinite linear; 
+}
+
+@keyframes girar {
+  from {
+    transform: rotate(0deg); 
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+.nube{
+    width:500px;
+    margin-top: -10vh;
+    position:absolute;
+    animation-name:anim_nube;
+    animation-duration:4s;
+    animation-delay: 0s;
+    animation: mover 2s forwards;
+    animation-direction: normal;
+}
+
+@keyframes mover {
+    from {
+        transform: translateX(0); 
+      }
+      to {
+        transform: translateX(550px); 
+      }
 }
