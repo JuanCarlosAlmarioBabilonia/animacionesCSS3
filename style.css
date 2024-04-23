@@ -1,7 +1,7 @@
 body{
     background-image:url("/imgs/casa.jpg") ;
     background-repeat:no-repeat;
-    background-size: cover;
+    background-size: 100%;
     z-index: 1;
 }
 
@@ -14,35 +14,110 @@ body{
     animation-duration:2s;
     animation-delay: 0s;
     opacity:1;
+    animation: girar 11s forwards;
     animation-direction: normal;
-    animation: girar 5s infinite linear; 
 }
 
 @keyframes girar {
-  from {
-    transform: rotate(0deg); 
-  }
-  to {
-    transform: rotate(360deg);
-  }
+    0% {
+        opacity: 0; 
+      }
+    50%{
+        opacity:0
+    }
+    100% {
+        opacity: 1;
+    }
 }
 
 .nube{
-    width:500px;
-    margin-top: -10vh;
+    width:600px;
+    margin-left:30%;
+    margin-top: -19vh;
     position:absolute;
-    animation-name:anim_nube;
     animation-duration:4s;
     animation-delay: 0s;
-    animation: mover 2s forwards;
+    animation: mover 0.9s forwards;
     animation-direction: normal;
 }
 
 @keyframes mover {
-    from {
-        transform: translateX(0); 
+    0% { 
+        margin-left:100vw;
+        opacity: 0; 
       }
-      to {
-        transform: translateX(550px); 
+      50% {
+        opacity: 1;
+      }
+
+      100%{
+        opacity:1
       }
 }
+
+.gotas{
+    width:300px;
+    margin-left:39%;
+    margin-top: 4vh;
+    z-index:-1;
+    position:absolute;
+    opacity:0;
+    animation: caidaGotas 10s forwards;
+    animation-direction: normal;
+}
+
+@keyframes caidaGotas {
+    0% { 
+      margin-top:5vh;
+      opacity: 0; 
+    }
+    70% {
+      opacity: 1;
+    }
+    100% {
+      margin-top: 65vh;
+      opacity: 0;
+    }
+  }
+
+  .flor {
+    width: 200px;
+    margin-left: 42%;
+    margin-top: 70vh; 
+    position: absolute;
+    opacity: 1;
+    animation: aparecerFlores 7s forwards
+  }
+
+  @keyframes aparecerFlores {
+    0% {
+        opacity: 0; 
+      }
+    85% {
+    opacity: 0; 
+    }
+    100% {
+      opacity: 1; 
+    }
+  }
+
+ .texto{
+   margin-left: 10vw;
+   width:20%;
+   font-size: 5vh;
+   opacity: 1;
+   animation: texto 7s forwards;
+   color: white;
+  }
+
+  @keyframes texto {
+    0% {
+        opacity: 0; 
+      }
+    85% {
+    opacity: 0; 
+    }
+    100% {
+      opacity: 1; 
+    }
+  }
